@@ -1,10 +1,9 @@
-==============================================================================
-This library was created by SpiderOak, Inc. and is released under the GPLv3.
+#SpiderOak zipstream module
+
+###This library was created by SpiderOak, Inc. and is released under the GPLv3.
 https://spideroak.com/
 codefeedback@spideroak.com
-==============================================================================
 
-SpiderOak zipstream module
 
 zipstream.py is a zip archive generator based on zipfile.py. It was created to
 generate a zip file on-the-fly for download in a web.py (http://webpy.org/)
@@ -16,15 +15,18 @@ The archive is generated as an iterator of strings, which, when joined, form
 the zip archive. For example, the following code snippet would write a zip
 archive containing files from 'path' to a normal file:
 
+```python
 zf = open('zipfile.zip', 'wb')
 for data in ZipStream(path):
     zf.write(data)
 zf.close()
+```
 
 Since recent versions of web.py support returning iterators of strings to be
 sent to the browser, to download a dynamically generated archive, you could
 use something like this snippet:
 
+```python
 def GET(self):
     path = '/path/to/dir/of/files'
     zip_filename = 'files.zip'
@@ -32,6 +34,7 @@ def GET(self):
     web.header('Content-Disposition', 'attachment; filename="%s"' % (
         zip_filename,))
     return ZipStream(path)
+```
 
 If the zlib module is available, ZipStream can generate compressed zip
 archives.
@@ -40,6 +43,8 @@ Contact the SpiderOak team at spideroak_tools@spideroak.com
 
 And be sure to back up your files! http://www.spideroak.com
 
+
+##Testing with large files
 
 Generate 6 gigs of random data
 `ionadmin@onfire:/results/zip$ dd if=/dev/urandom of=file.blob bs=1048576 count=6000`
@@ -50,12 +55,14 @@ Get the checksum of the generated file
 `
 
 Now compress it using zipstream
-`from zipstream import ZipStream
+```python
+from zipstream import ZipStream
 toZip = "/results/zip/file.blob"
 zf = open('zipfile.zip', 'wb')
 for data in ZipStream(toZip):
     zf.write(data)
-zf.close()`
+zf.close()
+```
 
 Check the output zipfile checksum
 `ionadmin@onfire:/results/zip/output$ md5sum zipfile.zip
@@ -71,4 +78,3 @@ The resulting file checksum
 
 
 So ZipStream is an option that will work with our current version of Python 2.6.5
-
