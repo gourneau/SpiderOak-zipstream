@@ -1,8 +1,11 @@
 #SpiderOak zipstream module
 
 ###This library was created by SpiderOak, Inc. and is released under the GPLv3.
-https://spideroak.com/
-codefeedback@spideroak.com
+####https://spideroak.com/
+####codefeedback@spideroak.com
+
+###THIS IS A GITHUB MIRROR ONLY
+
 
 
 zipstream.py is a zip archive generator based on zipfile.py. It was created to
