@@ -48,16 +48,18 @@ Contact the SpiderOak team at spideroak_tools@spideroak.com
 And be sure to back up your files! http://www.spideroak.com
 
 
-##Testing with large files
+##ZipStream works with HUGE files too!
 
 Generate 6 gigs of random data
-`ionadmin@onfire:/results/zip$ dd if=/dev/urandom of=file.blob bs=1048576 count=6000`
+```bash
+ionadmin@onfire:/results/zip$ dd if=/dev/urandom of=file.blob bs=1048576 count=6000
+```
 
 Get the checksum of the generated file
 ```bash
 onadmin@onfire:/results/zip$ md5sum file.blob
 11ef7625569f44977789caa785b5f112  file.blob
-````
+```
 
 Now compress it using zipstream
 
