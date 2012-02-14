@@ -1,10 +1,11 @@
 #SpiderOak zipstream module
+##THIS IS A GITHUB MIRROR ONLY
 
 ###This library was created by SpiderOak, Inc. and is released under the GPLv3.
 * https://spideroak.com/
 * codefeedback@spideroak.com
 
-###THIS IS A GITHUB MIRROR ONLY
+
 
 
 
