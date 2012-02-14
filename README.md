@@ -1,8 +1,8 @@
 #SpiderOak zipstream module
 
 ###This library was created by SpiderOak, Inc. and is released under the GPLv3.
-####https://spideroak.com/
-####codefeedback@spideroak.com
+* https://spideroak.com/
+* codefeedback@spideroak.com
 
 ###THIS IS A GITHUB MIRROR ONLY
 
@@ -53,9 +53,10 @@ Generate 6 gigs of random data
 `ionadmin@onfire:/results/zip$ dd if=/dev/urandom of=file.blob bs=1048576 count=6000`
 
 Get the checksum of the generated file
-`onadmin@onfire:/results/zip$ md5sum file.blob
+```bash
+onadmin@onfire:/results/zip$ md5sum file.blob
 11ef7625569f44977789caa785b5f112  file.blob
-`
+````
 
 Now compress it using zipstream
 
@@ -69,16 +70,24 @@ zf.close()
 ```
 
 Check the output zipfile checksum
-`ionadmin@onfire:/results/zip/output$ md5sum zipfile.zip
+
+```bash
+ionadmin@onfire:/results/zip/output$ md5sum zipfile.zip
 405437edcb0c81d7639e01f8f1e50417  zipfile.zip
-`
+```
 
 Unzip the zipped file
-`ionadmin@onfire:/results/zip/output$ unzip zipfile.zip`
+```bash
+ionadmin@onfire:/results/zip/output$ unzip zipfile.zip
+```
 
 The resulting file checksum
-`ionadmin@onfire:/results/zip/output$ md5sum file.blob
-11ef7625569f44977789caa785b5f112  file.blob`
 
+```bash
+ionadmin@onfire:/results/zip/output$ md5sum file.blob
+11ef7625569f44977789caa785b5f112  file.blob
+```
 
-So ZipStream is an option that will work with our current version of Python 2.6.5
+So ZipStream is a great solution if you need to zip large files with Python 2.6.5. 
+
+zipfile with Python 2.6.5 is broken http://bugs.python.org/issue8571 which is the distro used for Ubuntu 10.04
