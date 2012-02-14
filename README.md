@@ -6,9 +6,6 @@
 * codefeedback@spideroak.com
 
 
-
-
-
 zipstream.py is a zip archive generator based on zipfile.py. It was created to
 generate a zip file on-the-fly for download in a web.py (http://webpy.org/)
 application. This is beneficial for when you want to provide a downloadable
@@ -57,7 +54,7 @@ ionadmin@onfire:/results/zip$ dd if=/dev/urandom of=file.blob bs=1048576 count=6
 
 Get the checksum of the generated file
 ```bash
-onadmin@onfire:/results/zip$ md5sum file.blob
+ionadmin@onfire:/results/zip$ md5sum file.blob
 11ef7625569f44977789caa785b5f112  file.blob
 ```
 
@@ -80,9 +77,9 @@ ionadmin@onfire:/results/zip/output$ md5sum zipfile.zip
 ```
 
 Unzip the zipped file
-```bash
+`
 ionadmin@onfire:/results/zip/output$ unzip zipfile.zip
-```
+`
 
 The resulting file checksum
 
@@ -93,4 +90,6 @@ ionadmin@onfire:/results/zip/output$ md5sum file.blob
 
 So ZipStream is a great solution if you need to zip large files with Python 2.6.5. 
 
-zipfile with Python 2.6.5 is broken http://bugs.python.org/issue8571 which is the distro used for Ubuntu 10.04
+zipfile with Python 2.6.5 is broken for large files - http://bugs.python.org/issue8571 
+
+Python 2.6.5 is part of Ubuntu 10.04. So this ZipStream is a great solution to zip large files with Python 2.6.5!
