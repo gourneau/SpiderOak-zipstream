@@ -58,6 +58,7 @@ Get the checksum of the generated file
 `
 
 Now compress it using zipstream
+
 ```python
 from zipstream import ZipStream
 toZip = "/results/zip/file.blob"
