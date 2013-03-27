@@ -93,3 +93,6 @@ So ZipStream is a great solution if you need to zip large files with Python 2.6.
 zipfile with Python 2.6.5 is broken for large files - http://bugs.python.org/issue8571 
 
 Python 2.6.5 is part of Ubuntu 10.04. So this ZipStream is a great solution to zip large files with Python 2.6.5!
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gourneau/SpiderOak-zipstream/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
