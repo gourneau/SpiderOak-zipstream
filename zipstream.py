@@ -196,8 +196,8 @@ class ZipStream:
 
     def __iter__(self):
 	for p in self.path:
-		for data in self.zip_path(p, self.arc_path):
-	    	yield data
+            for data in self.zip_path(p, self.arc_path):
+	        yield data
 
         yield self.archive_footer()
 
