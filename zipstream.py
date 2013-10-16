@@ -190,13 +190,14 @@ class ZipStream:
 
         self.filelist = []              # List of ZipInfo instances for archive
         self.compression = compression  # Method of compression
-        self.path = path                # source path
+	self.path = path if isinstance(path, list) else [path] # source path / list of paths
         self.arc_path = arc_path        # top level path in archive
         self.data_ptr = 0               # Keep track of location inside archive
 
     def __iter__(self):
-        for data in self.zip_path(self.path, self.arc_path):
-            yield data
+	for p in self.path:
+            for data in self.zip_path(p, self.arc_path):
+	        yield data
 
         yield self.archive_footer()
 
