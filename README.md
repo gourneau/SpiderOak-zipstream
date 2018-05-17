@@ -1,9 +1,9 @@
-#SpiderOak zipstream module
+# SpiderOak zipstream module
 
 ##The offical repo is at https://github.com/SpiderOak/ZipStream please use that instead. 
 
 
-###This library was created by SpiderOak, Inc. and is released under the GPLv3.
+### This library was created by SpiderOak, Inc. and is released under the GPLv3.
 * https://spideroak.com/
 * codefeedback@spideroak.com
 
@@ -47,7 +47,7 @@ Contact the SpiderOak team at spideroak_tools@spideroak.com
 And be sure to back up your files! http://www.spideroak.com
 
 
-##ZipStream works with HUGE files too!
+## ZipStream works with HUGE files too!
 
 Generate 6 gigs of random data
 ```bash
@@ -95,6 +95,4 @@ So ZipStream is a great solution if you need to zip large files with Python 2.6.
 zipfile with Python 2.6.5 is broken for large files - http://bugs.python.org/issue8571 
 
 Python 2.6.5 is part of Ubuntu 10.04. So this ZipStream is a great solution to zip large files with Python 2.6.5!
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gourneau/SpiderOak-zipstream/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
