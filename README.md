@@ -1,6 +1,6 @@
 # SpiderOak zipstream module
 
-##The offical repo is at https://github.com/SpiderOak/ZipStream please use that instead. 
+## The offical repo is at https://github.com/SpiderOak/ZipStream please use that instead. 
 
 
 ### This library was created by SpiderOak, Inc. and is released under the GPLv3.
